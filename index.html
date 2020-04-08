@@ -1,0 +1,162 @@
+<html>
+
+<head>
+<link rel="icon" type="image/png" href="C:\Users\jeffr\Documents\Web Dev\Google Homepage\google-favicon.png" sizes="16x16">
+<link rel="icon" type="image/png" href="C:\Users\jeffr\Documents\Web Dev\Google Homepage\google-favicon.png" sizes="32x32">
+<link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Etch A Sketch</title>
+</head>
+
+<style>
+	body {
+		display: flex;
+		background-color: #B8D1D1;
+	}
+	
+	#gridFrame {
+		display: flex;
+		background-color: red;
+		width: 600px;
+		height: 540px;
+		justify-items: center;
+		align-items: center;
+		margin: 10px 100px 0 100px;
+		border-radius: 20px;
+		flex-direction: column;
+		border-right: 10px;
+		border-right-color: red;
+	}
+	
+	#gridBox {
+		display: grid;
+		background-color: #C7C9C9;
+		width: 450px;
+		height: 450px;
+		margin: -489px 0 0 0;
+
+
+	}
+	
+	h1 {
+		font-family: 'Yellowtail', cursive;
+		font-size: 30;
+		color: white;
+		margin: 4px 0 0 0;
+	}
+	
+	p {
+		font-family: 'Arial';
+		margin: 10px 5px 10px 5px;
+	}
+	
+	#rightControl {
+		margin: 0 3px 10px 0;
+		background-color: white;
+		border-radius: 50%;
+		width: 69px;
+		height: 69px;
+	}
+	
+	#leftControl {
+		margin: 0 0 10px 3px;
+		background-color: white;
+		border-radius: 50%;
+		width: 69px;
+		height: 69px;
+	}
+		
+	#controls {
+		display: flex; 
+		width: 600px;
+		flex-direction: row;
+		justify-content: space-between;
+		margin-top: 420px;
+
+	}
+	
+	#gridSizeInput {
+		width = 20px;
+		margin-left: 10px;
+	}
+	
+	#createButton {
+		border-radius: 1px;
+		margin-bottom: 10px;
+	}
+	
+	#inputs {
+		background-color: white;
+		align-self: center;
+		margin-bottom: 100px;
+		margin-left: 20px;
+		border-radius: 10px;
+		border: 4px solid black;
+	}
+	
+	@media (max-width: 800px) { 
+								body {
+									display: flex;
+									background-color: #B8D1D1;
+									flex-direction: column;
+									justify-content: center;
+									align-items: center;
+								}
+								
+								#gridFrame {
+									display: flex;
+									background-color: red;
+									width: 600px;
+									height: 540px;
+									justify-items: center;
+									align-items: center;
+									margin: -50px 0 0 100px;
+									border-radius: 20px;
+									flex-direction: column;
+									border-right: 10px;
+									border-right-color: red;
+								}
+								
+								#gridBox {
+								display: grid;
+								background-color: #C7C9C9;
+								width: 450px;
+								height: 450px;
+								margin: -489px 0 0 0;
+								
+								}
+								
+								#inputs {
+									background-color: white;
+									align-self: center;
+									border-radius: 10px;
+									border: 4px solid black;
+									margin-top: 0px 0 0 0;
+									align-self: center;
+								}
+		}
+	
+</style>
+
+<body>
+	<div id='inputs'>
+		<p>Enter the number of pixels below to create a new grid:</p>
+		<input type='number' id='gridSizeInput' value='40'>
+		<button id='createButton'>Create New Grid</button>
+	</div>
+	<div id='gridFrame'>
+		<h1>Etch A Sketch</h1>
+		<div id='controls'>
+			<div id='leftControl'> </div>
+			<div id='rightControl'> </div>
+		</div>
+		<div id='gridBox'></div>
+
+	</div>
+
+</body>
+
+<script src='etchASketch.js'></script>
+<footer>
+</footer>
+</html>
